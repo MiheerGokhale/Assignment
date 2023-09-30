@@ -1,0 +1,79 @@
+It seems like your message contains several typographical errors, making it difficult to understand your questions clearly. However, I will attempt to address the points you mentioned to the best of my ability.
+
+1. **Default value of Array in different data types:**
+   - For numeric types (like int, float), the default value is 0.
+   - For boolean type, the default value is false.
+   - For object references (like String), the default value is null.
+
+2. **Finding the negative number in an array:**
+public class Main {
+    public static void main(String[] args) {
+        int[] array = {1, -2, 3, -4, 5, -6};
+        int count = 0;
+
+        // Count the number of negative numbers in the array
+        for (int num : array) {
+            if (num < 0) {
+                count++;
+            }
+        }
+
+        // Create a new array to store negative numbers
+        int[] negativeNumbers = new int[count];
+        int index = 0;
+
+        // Store negative numbers in the new array
+        for (int num : array) {
+            if (num < 0) {
+                negativeNumbers[index] = num;
+                index++;
+            }
+        }
+
+        // Print negative numbers in the array
+        System.out.print("Negative numbers in the array: ");
+        for (int num : negativeNumbers) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+3. **Where does Array stored in JVM memory:**
+   In Java, arrays are objects, so they are stored in the heap memory of the Java Virtual Machine (JVM).
+
+4. **Advantages and disadvantages of Array:**
+   - **Advantages:** Arrays allow for easy storage and retrieval of elements based on index. They provide fast access to elements.
+   - **Disadvantages:** Arrays in most programming languages have a fixed size, which means you need to know the size in advance. Resizing an array can be inefficient as it may require creating a new, larger array and copying elements.
+
+5. **Anonymous Array in Java:**
+   An anonymous array in Java is an array without a name. It is typically used for immediate array initialization. Here's an example of an anonymous array:
+   ```java
+   int[] numbers = new int[]{1, 2, 3, 4, 5};
+   ```
+
+6. **Different ways to traverse an Array in Java:**
+   - **Using For Loop:**
+   ```java
+   for (int i = 0; i < array.length; i++) {
+       // Access array[i] here
+   }
+   ```
+   - **Using Enhanced For Loop (for-each loop):**
+   ```java
+   for (int num : array) {
+       // Access num here
+   }
+   ```
+   - **Using Streams (Java 8 onwards):**
+   ```java
+   Arrays.stream(array).forEach(num -> {
+       // Access num here
+   });
+   ```
+
+7. **Difference between length and length() in Java:**
+   - `length`: It is a property of arrays in Java and provides the length (number of elements) of the array.
+   - `length()`: It is a method of the String class in Java and provides the length (number of characters) of the string.
+
+I hope this helps! If you have more specific or clearer questions, please feel free to ask.
